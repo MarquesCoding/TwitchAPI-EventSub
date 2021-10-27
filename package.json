@@ -1,0 +1,21 @@
+{
+  "name": "giantwaffle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@twurple/auth": "^5.0.7",
+    "@twurple/chat": "^5.0.7",
+    "@twurple/eventsub": "^5.0.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "twitch": "^4.6.7",
+    "twitch-auth": "^4.6.7"
+  }
+}
