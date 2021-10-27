@@ -19,9 +19,13 @@ const app = express();
 
 async function createEventSub() {
   //Create a listener for when someone follows to giantwaffle.
-  await apiClient.helix.eventSub.subscribeToChannelFollowEvents("giantwaffle", {
-    callbackUrl: callbackURL,
-  });
+  await apiClient.helix.eventSub.subscribeToChannelFollowEvents(
+    "YOUR TWITCH CHANNEL NAME",
+    {
+      callbackUrl: callbackURL,
+    }
+  );
+  console.log("EventSub created.");
 }
 
 //ENDPOINT FOR TWITCH FOR SETTING UP A EVENTSUB
