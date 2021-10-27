@@ -39,6 +39,18 @@ app.get("/createEvent", async (req, res) => {
   await createEventSub();
 });
 
+app.get("/eventSubs", async (req, res) => {
+  //Searches TwitchAPI with your Application credientials for EventSubs
+  const response = await apiClient.helix.eventSub.getSubscriptions();
+  if (!response) {
+    res
+      .status(200)
+      .json({ message: `There are no event subscriptions setup.` });
+  } else {
+    res.status(200).json(response);
+  }
+});
+
 app.listen(PORT, () => {
   console.log("RUNNING ON PORT 80");
 });
